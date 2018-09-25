@@ -1,7 +1,6 @@
 package com.dimon.tryjava.myAwaitility;
 
 import java.util.concurrent.Callable;
-import com.dimon.testy.javatry.myAwaitility.CounterServiceImpl;
 
 public class AwaitilityTry {
     public void testAsynchronousNormal() {

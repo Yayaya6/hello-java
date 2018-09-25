@@ -1,6 +1,4 @@
-package com.dimon.testy.javatry.myAwaitility;
-
-import com.dimon.tryjava.myAwaitility.CounterService;
+package com.dimon.tryjava.myAwaitility;
 
 public class CounterServiceImpl implements CounterService {
     private volatile int count = 0;
