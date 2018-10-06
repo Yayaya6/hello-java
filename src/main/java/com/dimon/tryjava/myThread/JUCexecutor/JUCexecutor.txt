@@ -1,0 +1,42 @@
+
+
+Executor 框架（线程池、Callable、Future），任务的执行和调度框架
+
+Callable 接口
+在介绍线程池之前，我们先来看一下 Callable 接口（函数式接口），它只有一个 call() 方法；
+在 Java5 之前，我们只有一个 Runnable 接口，用来定义任务，将它交给一个 Thread 对象去执行；
+但是 Runnable 接口的 run() 方法是没有返回值的，也不能抛出任何检查性异常，有些时候不方便。
+现在我们可以利用 Callable 接口，来定义有返回值并且可抛出检查异常的任务，将它交给 ExecutorService 去执行；
+ExecutorService.submit() 方法将返回一个 Future 对象（待完成的任务结果对象），Future.get() 方法可获取结果。
+
+
+Future 接口
+Future 表示异步任务的结果，Future 提供了任务查询、任务取消、获取任务结果等实用方法；
+
+
+FutureTask 类
+FutureTask 表示异步计算任务；它同时实现了 Runnable、Future 接口，因此可直接交给 Thread 执行，并获取结果；
+
+
+Executor 接口
+最顶层是 Executor 接口，它的定义很简单，只有一个用于执行任务的 execute() 方法：
+
+
+ExecutorService 接口
+ExecutorService 接口继承自 Executor 公共接口，它提供了更丰富的线程池控制方法，
+比如 shutdown() 用于平滑关闭线程池，submit() 用于提交 Callable 任务（相比 Runnable 任务，它可以有返回值、可以抛出异常）：
+
+
+AbstractExecutorService 抽象类
+AbstractExecutorService 抽象类实现了 ExecutorService 接口的 submit、invoke 系列方法；
+
+
+ThreadPoolExecutor 类
+ThreadPoolExecutor 核心类，创建自定义线程池就靠它了，下面是其主要方法：
+
+
+
+
+
+
+
