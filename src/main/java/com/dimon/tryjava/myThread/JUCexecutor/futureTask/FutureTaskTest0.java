@@ -1,13 +1,10 @@
-package com.dimon.tryjava.myThread.JUCexecutor;
+package com.dimon.tryjava.myThread.JUCexecutor.futureTask;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
-/**
- * Created by limeng on 2018/10/5.
- */
-public class futureTaskMain {
+public class FutureTaskTest0 {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         FutureTask<String> task =
@@ -15,6 +12,7 @@ public class futureTaskMain {
         new Thread(task).start();
         System.out.println("task result: " + task.get());
     }
+
 }
 
 class Task implements Callable<String> {
