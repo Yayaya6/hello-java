@@ -1,4 +1,4 @@
-package com.dimon.tryjava.myAlgorithm;
+package com.dimon.tryjava.programmingInterview.myAlgorithm;
 
 public class MergeSort {
     //归并排序
