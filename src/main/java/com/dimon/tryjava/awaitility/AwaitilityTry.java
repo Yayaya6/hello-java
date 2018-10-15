@@ -1,6 +1,4 @@
-package com.dimon.tryjava.myAwaitility;
-
-import java.util.concurrent.Callable;
+package com.dimon.tryjava.awaitility;
 
 //import java.util.concurrent.TimeUnit.*;
 //import org.awaitility.Awaitility;

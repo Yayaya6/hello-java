@@ -1,4 +1,4 @@
-package com.dimon.tryjava.myAwaitility;
+package com.dimon.tryjava.awaitility;
 
 import org.junit.Assert;
 import static java.util.concurrent.TimeUnit.*;
@@ -6,8 +6,6 @@ import static org.awaitility.Awaitility.*;
 import static org.awaitility.Duration.*;
 import static org.awaitility.pollinterval.FibonacciPollInterval.*;
 
-import com.dimon.tryjava.myAwaitility.CounterService;
-import com.dimon.tryjava.myAwaitility.CounterServiceImpl;
 import com.dimon.tryjava.utils.DateTimeUtil;
 import java.util.concurrent.Callable;
 import org.junit.Test;
